@@ -32,8 +32,8 @@ function valuesToString() {
    
 };
 function arrayOrObject(data) {
-          if ( typeof data === "object"){
-              //if (typeof data ===  )
+          if (Array.isArray(data)=== true){
+              return "array"
           } 
           else return "object";
    
@@ -93,7 +93,71 @@ function maybeNoises(object){
 }
 
 function hasWord(string, word){
-    if (string.search(word) === 0){  
-    return true;
-}   else return false;
+    if (string.search(word) === -1){  
+    return false;
+}   else return true;
 };
+
+
+function addFriend(name, object){
+    object.friends.push(name);
+    return object;
+}
+
+function isFriend(name, object){
+
+    if(object.friends){
+        for( var i = 0; i < object.friends.length; i++){
+            if (name === object.friends[i]){
+                return true;}
+        } 
+        return false;
+    } return false}
+    
+function nonFriends(name, data){
+    var notFriends = [];
+    for (var i = 0; i < data.length; i++){
+        var personPresent = false;
+        if(data[i].name !== name){
+            for (var k = 0; k < data[i].friends.length; k++){
+                if(data[i].friends[k] === name){
+                    personPresent = true;
+                }
+            }
+                
+        } 
+        if (personPresent === false && data[i].name !== name){
+            notFriends.push(data[i].name);
+        }
+    } 
+    return notFriends;
+}
+
+function updateObject(object, key, value){
+        object[key] = value;
+        return object;
+}
+
+
+function removeProperties(object, array){
+    if (array.length > 0){
+        for(var key in object){
+            for (var i = 0; i < array.length; i++){
+                 if (key === array[i]){
+                 delete (object[key]);
+                }
+            }
+        }
+    }
+    return object
+}
+
+function dedup(array){
+    var newArray =[];
+    for(var i = 0; array.length > i; i++){
+        if (newArray.indexOf(array[i]) === -1){
+            newArray.push(array[i])
+        }
+    }    
+    return newArray;
+}
