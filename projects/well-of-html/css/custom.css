@@ -1,0 +1,60 @@
+.container {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    justify-content: space-around;
+}
+
+.item {
+    flex-grow:1;
+    flex-shrink:2;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+form {
+ 
+  margin: 0 auto;
+  width: 330px;
+  padding: 1em;
+  border: 1px solid black;
+  
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+}
+
+input, textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+ border-color: #000;
+}
+
+textarea {
+ vertical-align: top;
+ height: 5em;
+}
+
+.button {
+ padding-left: 75px; 
+}
+
+button {
+  margin-left: .5em;
+}
+
+

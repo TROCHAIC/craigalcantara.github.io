@@ -467,19 +467,23 @@ _.some = function(collection, action){
 
 _.reduce = function(array, action, seed){
 
-var pr = 0;
+var pr;
+
 
 
     if(typeof seed !== 'undefined'){
         pr = seed;
+        for(var i = 0; i < array.length; i++){
+         pr = action(pr, array[i], i)
+        };
     } else {
         pr = array[0];
+        for(var i = 1; i < array.length; i++){
+         pr = action(pr, array[i], i)
+        };
     }
-    _.each(array, function(pr, e, i){
-          pr =  action(pr,e, i)
-        });
-        
-return pr
+ 
+return pr;
 
 }
 
@@ -498,5 +502,12 @@ return pr
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
 
+_.extend = function(data, object){
+    _.each(data[key], function ){
+        data[key] = object[key]
+
+    }
+    return data;
+}
 // This is the proper way to end a javascript library
 }());

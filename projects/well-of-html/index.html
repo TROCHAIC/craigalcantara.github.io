@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/notes/notes.js"></script>
+    <title>A Well of HTML</title>
+    <style type="text/css">
+        
+    </style>
+   
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!-- ALL YOUR MARKUP GOES BELOW HERE -->
+        <div>
+            <h3>Link about Food!</h3>
+            <a href="https://en.wikipedia.org/wiki/Uzbek_cuisine">Delicious Uzbek Food!</a>
+        </div>
+        <div>
+         <h3>Picture of Food!</h3>
+           <img src="img/cherries.jpg"/>  
+        </div>
+        <div>   
+            <h3>Words about Food!</h3>
+            
+            <p>Like most temperate-latitude trees, cherry seeds require exposure to cold to germinate (an adaptation which prevents germination during the autumn, which would then result in the seedling being killed by winter temperatures). <b><i>The pits</b></i> are planted in the autumn (after first being chilled) and seedlings emerge in the spring.[10] A cherry tree will take three to four years in the field to produce its first crop of fruit, and seven years to attain full maturity.[10] Because of the cold-weather requirement, none of the Prunus genus can grow in tropical climates.</p>
+            <p><b>Cherries</b> have a short growing season and can grow in most temperate latitudes.[10] Cherries blossom in April (in the Northern Hemisphere) and the peak season for the cherry harvest is in the summer. In southern Europe in June, in North America in June, in England in mid-July, and in southern British Columbia (Canada) in June to mid-August. In many parts of North America, they are among the first tree fruits to flower and ripen in mid-Spring.</p>
+            <p>In the Southern Hemisphere, <b>cherries are usually at their peak in late December and are widely associated with Christmas.</b> 'Kordia' is an early variety which ripens during the beginning of December, 'Lapins peak' ripens near the end of December, and 'Sweethearts' finish slightly later.</p>
+        </div>
+            
+        <div>
+            <h3>Food-lists</h3>
+            <h4>The best foods include:</h4>
+            <ol>
+                <li>Bleu Cheese</li>
+                <li>Lesser Varieties of Cheese</li>
+                <li>Mashed Potatoes</li>
+                <li>Unfortunately Cherries</li>
+            </ol>
+            
+            <h4>Some foods that are edible, but not "the best":</h4>
+            <ul>
+                <li>Tomatoes</li>
+                <li>Chocolate</li>
+                <li>Coffee</li>
+                <li>Milks</li>
+            </ul>
+        </div>
+        
+        <div>
+        <h3>
+        If you disagree, please, send me your thoughts. 
+        </h3>
+        
+        
+            <form action="/my-handling-form-page" method="post">
+        
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <div class="button">
+              <button type="submit">Send your message</button>
+            </div>
+        </div>
+    </form>
+<hr>
+    <div>
+            <h3>More data about foods</h3>
+        
+            <table style="width:100%">
+                <tr>
+                        <th>Name</th>
+                        <th>How Good It Is</th>
+                        <th>Country of Origin</th>
+                        <th>Spanish Name</th>
+                </tr>
+            <tbody>
+                    <tr>
+                        <td>Orange</td>
+                        <td>Alright</td>
+                        <td>China?</td>
+                        <td><i>Naranja</i></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Rice</td>
+                        <td>Perhaps the greatest</td>
+                        <td>Also maybe China?</td>
+                        <td><i>arroz</i></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Sardines</td>
+                        <td>Edible</td>
+                        <td>The Ocean</td>
+                        <td><i>sardina</i></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Ketchup</td>
+                        <td>gross-sauce</td>
+                        <td>Probably 'Murica</td>
+                        <td><i>salsa de tomate</i></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Chocolate Chip Cookies</td>
+                        <td>divine</td>
+                        <td>Heaven</td>
+                        <td><i>galletas de chocolate</i></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    
+ 
+    
+    <div class="example-grid">
+        <h3>More Berry things</h3>
+  <div class="row">
+      <div class="col-md-2"><img src="img/cherries.jpg" class="row-img"></img>
+      </div>
+      <div class="col-md-10">Cherries are tasty things that grow on trees! You can eat them and feel good about yourself!</div>
+  </div>
+  <div class="row">
+      <div class="col-md-2"><img src="img/black-currant.jpg" class="row-img"></img>
+      </div>
+      <div class="col-md-10">Black Currents are tasty things that grow on bushes! You can eat them and feel good about yourself!</div>
+  </div>
+  <div class="row">
+      <div class="col-md-2"><img src="img/apple-in-grass.jpg" class="row-img"></img>
+      </div>
+      <div class="col-md-10">Apples are tasty things that grow on trees! You can eat them and feel good about yourself! They make great pies!</div>
+  </div>
+</div>
+        <!-- ALL YOUR MARKUP GOES ABOVE HERE -->
+    </div>
+    <script>
+        $(function () {
+            window.opspark.notes.show();
+        });
+    </script>
+</body>
+
+</html>
